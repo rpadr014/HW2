@@ -30,6 +30,7 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -41,6 +42,7 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Name";
+            this.groupBox1.Controls.Add(this.textBox1);
             // 
             // listView1
             // 
@@ -50,6 +52,15 @@
             this.listView1.Size = new System.Drawing.Size(984, 461);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
+
+            this.textBox1.Location = new System.Drawing.Point(12, 20);
+            this.textBox1.Anchor = (AnchorStyles.Top | AnchorStyles.Left);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(850, 31);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
+
+
             // 
             // HW1
             // 
@@ -70,5 +81,6 @@
 
         private GroupBox groupBox1;
         private ListView listView1;
+        private TextBox textBox1;
     }
 }
