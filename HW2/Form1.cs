@@ -2,9 +2,9 @@ using HW2.Properties;
 
 namespace HW2
 {
-    public partial class HW1 : Form
+    public partial class HW2 : Form
     {
-        public HW1()
+        public HW2()
         {
             InitializeComponent();
         }
@@ -43,6 +43,24 @@ namespace HW2
                 this.listView1.Items.Add(this.textBox1.Text);
                 this.textBox1.Clear();
                 this.errorProvider1.SetError(this.textBox1, String.Empty);
+            }
+        }
+
+        private void HW2_Deactivate(object sender, EventArgs e)
+        {
+            //will add once tray icon is working
+            //this.Visible = false; 
+        }
+
+        private void HW2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (listView1.Items.Count != 0) {
+                if (MessageBox.Show("Are you sure you want to close the application?", "Names found!", MessageBoxButtons.YesNo) == DialogResult.No) {
+                    e.Cancel = true;
+                    this.WindowState = FormWindowState.Normal;
+                    this.Visible = true;
+                    this.Activate();
+                }
             }
         }
     }
