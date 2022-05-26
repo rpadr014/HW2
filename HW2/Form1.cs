@@ -15,17 +15,34 @@ namespace HW2
             this.Location = Settings.Default.clientLocation;
         }
 
-        private void textBox1_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        private bool verifyTextBox()
         {
             if (String.IsNullOrEmpty(this.textBox1.Text))
             {
-                MessageBox.Show("Your name input is empty", "Error Detected in Input");
-                return;
+                this.errorProvider1.SetError(this.textBox1, "Your name input is empty");
+                return false;
             }
             if (this.textBox1.Text.Length >= 15)
             {
-                MessageBox.Show("Your name input should not be longer than 15 characters", "Error Detected in Input");
-                return;
+                this.errorProvider1.SetError(this.textBox1, "Your name input should not be longer than 15 character");
+                return false;
+            }
+            return true;
+        }
+
+        private void textBox1_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            verifyTextBox();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.button1.Focus();
+            if (verifyTextBox())
+            {
+                this.listView1.Items.Add(this.textBox1.Text);
+                this.textBox1.Clear();
+                this.errorProvider1.SetError(this.textBox1, String.Empty);
             }
         }
     }
