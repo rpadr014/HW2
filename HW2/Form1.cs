@@ -17,7 +17,7 @@ namespace HW2
 
         private bool verifyTextBox()
         {
-            if (String.IsNullOrEmpty(this.textBox1.Text))
+            if (String.IsNullOrEmpty(this.textBox1.Text.Trim()))
             {
                 this.errorProvider1.SetError(this.textBox1, "Your name input is empty");
                 return false;
