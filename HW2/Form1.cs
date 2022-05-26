@@ -11,6 +11,7 @@ namespace HW2
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.MinimumSize = new System.Drawing.Size(1020, 560);
             this.ClientSize = Settings.Default.clientSize;
             this.Location = Settings.Default.clientLocation;
         }
@@ -44,6 +45,13 @@ namespace HW2
                 this.textBox1.Clear();
                 this.errorProvider1.SetError(this.textBox1, String.Empty);
             }
+        }
+
+        private void saveSizeButton_Click(object sender, EventArgs e)
+        {
+            Settings.Default.clientSize = this.ClientSize;
+            Settings.Default.Save();
+            MessageBox.Show("Client size settings saved", "Success");
         }
 
         private void HW2_Deactivate(object sender, EventArgs e)

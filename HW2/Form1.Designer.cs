@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.saveSizeButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -40,6 +41,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.saveSizeButton);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -49,6 +51,18 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Name";
+            // 
+            // saveSizeButton
+            // 
+            this.saveSizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.saveSizeButton.CausesValidation = false;
+            this.saveSizeButton.Location = new System.Drawing.Point(12, 102);
+            this.saveSizeButton.Name = "saveSizeButton";
+            this.saveSizeButton.Size = new System.Drawing.Size(120, 20);
+            this.saveSizeButton.TabIndex = 2;
+            this.saveSizeButton.Text = "Save Size";
+            this.saveSizeButton.UseVisualStyleBackColor = true;
+            this.saveSizeButton.Click += new System.EventHandler(this.saveSizeButton_Click);
             // 
             // textBox1
             // 
@@ -109,5 +123,6 @@
         private TextBox textBox1;
         private Button button1;
         private ErrorProvider errorProvider1;
+        private Button saveSizeButton;
     }
 }
