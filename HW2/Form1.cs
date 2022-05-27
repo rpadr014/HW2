@@ -51,15 +51,8 @@ namespace HW2
         {
             Settings.Default.clientSize = this.ClientSize;
             Settings.Default.Save();
-            MessageBox.Show("Client size settings saved", "Success");
+            //MessageBox.Show("Client size settings saved", "Success");
         }
-
-        private void saveLocationButton(object sender, EventArgs e)
-        {
-            Settings.Default.clientLocation = this.Location;
-            Settings.Default.Save();
-        }
-
 
         private void HW2_Deactivate(object sender, EventArgs e)
         {
@@ -79,20 +72,21 @@ namespace HW2
             }
         }
 
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-        
         //Notify icon method
         private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
         {
             //Checks if application is minimized
             if (this.WindowState == FormWindowState.Minimized)
                 this.WindowState = FormWindowState.Normal;
-            
-            //Activates the form
-            this.Activate();
+
+             //Activates the form
+             this.Activate();
 
         }
+        private void saveLocationButton_Click(object sender, EventArgs e)
+        {
+            Settings.Default.clientLocation = this.Location;
+            Settings.Default.Save();
+        }
     }
-}
+} 
