@@ -71,5 +71,16 @@ namespace HW2
                 }
             }
         }
+
+        //Notify icon method
+        private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
+        {
+            //Checks if application is minimized
+            if (this.WindowState == FormWindowState.Minimized)
+                this.WindowState = FormWindowState.Normal;
+            
+            //Activates the form
+            this.Activate();
+        }
     }
 }
