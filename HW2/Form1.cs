@@ -79,8 +79,19 @@ namespace HW2
             }
         }
 
+
         private void groupBox1_Enter(object sender, EventArgs e)
         {
+        
+        //Notify icon method
+        private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
+        {
+            //Checks if application is minimized
+            if (this.WindowState == FormWindowState.Minimized)
+                this.WindowState = FormWindowState.Normal;
+            
+            //Activates the form
+            this.Activate();
 
         }
     }

@@ -29,13 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HW2));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.saveSizeButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+
             this.button2 = new System.Windows.Forms.Button();
+
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -114,6 +119,12 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "Save Location\r\n";
             this.button2.UseVisualStyleBackColor = true;
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            this.notifyIcon1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseClick);
             // 
             // HW2
             // 
@@ -144,6 +155,9 @@
         private Button button1;
         private ErrorProvider errorProvider1;
         private Button saveSizeButton;
+
         private Button button2;
+        private NotifyIcon notifyIcon1;
+
     }
 }
