@@ -54,6 +54,13 @@ namespace HW2
             MessageBox.Show("Client size settings saved", "Success");
         }
 
+        private void saveLocationButton(object sender, EventArgs e)
+        {
+            Settings.Default.clientLocation = this.Location;
+            Settings.Default.Save();
+        }
+
+
         private void HW2_Deactivate(object sender, EventArgs e)
         {
             //will add once tray icon is working
@@ -70,6 +77,11 @@ namespace HW2
                     this.Activate();
                 }
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
