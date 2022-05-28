@@ -88,5 +88,14 @@ namespace HW2
             Settings.Default.clientLocation = this.Location;
             Settings.Default.Save();
         }
+
+        private void resetButton_Click(object sender, EventArgs e)
+        {
+            Settings.Default.clientLocation = new System.Drawing.Point(200, 200);
+            Settings.Default.clientSize = new System.Drawing.Size(1500, 900);
+            Settings.Default.Save();
+            this.ClientSize = Settings.Default.clientSize;
+            this.Location = Settings.Default.clientLocation;
+        }
     }
 } 
