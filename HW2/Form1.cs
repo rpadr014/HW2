@@ -28,6 +28,12 @@ namespace HW2
                 this.errorProvider1.SetError(this.textBox1, "Your name input should not be longer than 15 character");
                 return false;
             }
+            if (textBox1.Text.Any(Char.IsWhiteSpace))
+            {
+                errorProvider1.SetError(this.textBox1, "Name can only contain a non-space character");
+                return false;
+            }
+            
             return true;
         }
 
