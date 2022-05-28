@@ -11,7 +11,7 @@ namespace HW2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.MinimumSize = new System.Drawing.Size(1020, 560);
+            this.MinimumSize = new System.Drawing.Size(950, 348);
             this.ClientSize = Settings.Default.clientSize;
             this.Location = Settings.Default.clientLocation;
         }
@@ -56,8 +56,7 @@ namespace HW2
 
         private void HW2_Deactivate(object sender, EventArgs e)
         {
-            //will add once tray icon is working
-            //this.Visible = false; 
+            this.Visible = false; 
         }
 
         private void HW2_FormClosing(object sender, FormClosingEventArgs e)
@@ -75,12 +74,13 @@ namespace HW2
         //Notify icon method
         private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
         {
+            this.Visible = true;
             //Checks if application is minimized
             if (this.WindowState == FormWindowState.Minimized)
                 this.WindowState = FormWindowState.Normal;
 
-             //Activates the form
-             this.Activate();
+            //Activates the form
+            this.Activate();
 
         }
         private void saveLocationButton_Click(object sender, EventArgs e)

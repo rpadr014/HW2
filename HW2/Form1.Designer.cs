@@ -60,10 +60,10 @@
             // 
             this.saveLocationButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.saveLocationButton.CausesValidation = false;
-            this.saveLocationButton.Location = new System.Drawing.Point(845, 100);
-            this.saveLocationButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.saveLocationButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.saveLocationButton.Location = new System.Drawing.Point(850, 99);
             this.saveLocationButton.Name = "saveLocationButton";
-            this.saveLocationButton.Size = new System.Drawing.Size(124, 22);
+            this.saveLocationButton.Size = new System.Drawing.Size(120, 23);
             this.saveLocationButton.TabIndex = 3;
             this.saveLocationButton.Text = "Save Location\r\n";
             this.saveLocationButton.UseVisualStyleBackColor = true;
@@ -73,9 +73,10 @@
             // 
             this.saveSizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.saveSizeButton.CausesValidation = false;
-            this.saveSizeButton.Location = new System.Drawing.Point(12, 102);
+            this.saveSizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.saveSizeButton.Location = new System.Drawing.Point(12, 99);
             this.saveSizeButton.Name = "saveSizeButton";
-            this.saveSizeButton.Size = new System.Drawing.Size(120, 20);
+            this.saveSizeButton.Size = new System.Drawing.Size(120, 23);
             this.saveSizeButton.TabIndex = 2;
             this.saveSizeButton.Text = "Save Size";
             this.saveSizeButton.UseVisualStyleBackColor = true;
@@ -83,20 +84,25 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 20);
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.textBox1.Location = new System.Drawing.Point(3, 19);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(850, 23);
+            this.textBox1.Size = new System.Drawing.Size(756, 23);
             this.textBox1.TabIndex = 0;
             this.textBox1.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(850, 20);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(850, 19);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 20);
+            this.button1.Size = new System.Drawing.Size(120, 23);
             this.button1.TabIndex = 1;
             this.button1.Text = "Add Name";
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // listView1
